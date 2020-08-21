@@ -1,0 +1,22 @@
+{
+  "name": "xlhcli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/xia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luminxueba222/xlh-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luminxueba222/xlh-cli/issues"
+  },
+  "homepage": "https://github.com/luminxueba222/xlh-cli#readme",
+  "dependencies": {}
+}
