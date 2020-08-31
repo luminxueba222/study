@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": "./bin/xia.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"node build/build.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,10 @@
     "axios": "^0.20.0",
     "chalk": "^4.1.0",
     "commander": "^6.0.0",
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.2"
   }
 }
