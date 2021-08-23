@@ -29,12 +29,19 @@
         JSON.stringify() 返回与指定值对应的JSON字符串，可以通过额外的参数,
         控制仅包含某些属性, 或者以自定义方法来替换某些key对应的属性值。
       </div>
+      <div>JSON.stringify() 把js对象转换成JSON字符串</div>
+      <div>JSON.parse() 把JSON字符串转换成js对象</div>
     </div>
     <script>
+      const list = [
+        { name: "xlh", age: 10 },
+        { name: "lml", age: 12 },
+      ];
       function parse(sJSON) {
+        //原理 eval()
         return eval("(" + sJSON + ")");
       }
-      let strObj = JSON.stringify({ name: 1 });
+      let strObj = JSON.stringify(list);
       console.log("strObj", strObj);
       let parseJSON = parse(strObj);
       console.log("parseJSON", parseJSON);
@@ -46,21 +53,6 @@
         if (k === "") return v; // 如果到了最顶层，则直接返回属性值，
         return v * 2; // 否则将属性值变为原来的 2 倍。
       });
-      // JSON.parse("null", function (k, v) {
-      //   console.log("k", k);
-      //   console.log("v", v);
-      //   if (k === "") return v; // 如果到了最顶层，则直接返回属性值，
-      //   console.log("v", v);
-      //   return v * 2; // 否则将属性值变为原来的 2 倍。
-      // });
-      JSON.parse(
-        '{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}',
-        function (k, v) {
-          console.log(k); // 输出当前的属性名，从而得知遍历顺序是从内向外的，
-          // 最后一个属性名会是个空字符串。
-          return v; // 返回原始属性值，相当于没有传递 reviver 参数。
-        }
-      );
     </script>
   </body>
 </html>
