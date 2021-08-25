@@ -19,5 +19,14 @@
   </head>
   <body>
     <h1>Hello World</h1>
+    <script src="./base.js"></script>
+    <script src="./MD5.js"></script>
+    <script src="./sha1.js"></script>
+    <script>
+      let a = Base64.encode("xxxxx21312xxxx");
+      console.log("a", Base64.decode(Base64.encode("xxxxx21312xxxx")));
+      let b = hex_sha1("xialinhui");
+      console.log("a", b);
+    </script>
   </body>
 </html>
