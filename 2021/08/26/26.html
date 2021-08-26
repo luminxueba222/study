@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 复习总结</title>
+    <style>
+      .box1 {
+        /*   标准盒模型*/
+        box-sizing: content-box;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 10px solid red;
+        margin: 10px;
+        background: #000;
+        color: #fff;
+      }
+
+      .box2 {
+        /* IE盒模型 */
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 10px solid red;
+        margin: 10px;
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">标准盒模型</div>
+    <div class="box2">IE盒模型</div>
+    <script>
+      //window.getComputedStyle(Array.from(document.getElementsByClassName('box1'))[0]).width;
+      // Array.from(document.getElementsByClassName('box1'))[0].style.width;
+      // Array.from(document.getElementsByClassName('box1'))[0].getBoundingClientRect().width
+      // 100px getComputedStyle ;
+      //       style
+      // 140 "getBoundingClientRect"
+      // window.getComputedStyle(Array.from(document.getElementsByClassName('box2'))[0]).width;
+      // Array.from(document.getElementsByClassName('box2'))[0].style.width;
+      // Array.from(document.getElementsByClassName('box2'))[0].getBoundingClientRect().width
+      // 100px getComputedStyle ;
+      //       style
+      // 100 "getBoundingClientRect"
+    </script>
+  </body>
+</html>
