@@ -40,48 +40,48 @@
 //promise2
 //setTimeout
 //  10  11  5  6 1  2  9  3 4 7 8
-setTimeout(() => {
-  console.log(1);
+// setTimeout(() => {
+//   console.log(1);
 
-  Promise.resolve().then(() => {
-    console.log(2);
-  });
+//   Promise.resolve().then(() => {
+//     console.log(2);
+//   });
 
-  setTimeout(() => {
-    console.log(3);
+//   setTimeout(() => {
+//     console.log(3);
 
-    Promise.resolve().then(() => {
-      console.log(4);
-    });
-  }, 1500);
-  Promise.resolve().then(() => {
-    console.log(9);
-  });
-}, 2000);
+//     Promise.resolve().then(() => {
+//       console.log(4);
+//     });
+//   }, 1500);
+//   Promise.resolve().then(() => {
+//     console.log(9);
+//   });
+// }, 2000);
 
-Promise.resolve().then(() => {
-  console.log(10);
-  Promise.resolve().then(() => {
-    console.log(11);
-  });
-});
+// Promise.resolve().then(() => {
+//   console.log(10);
+//   Promise.resolve().then(() => {
+//     console.log(11);
+//   });
+// });
 
-setTimeout(() => {
-  console.log(5);
+// setTimeout(() => {
+//   console.log(5);
 
-  Promise.resolve().then(() => {
-    console.log(6);
-  });
+//   Promise.resolve().then(() => {
+//     console.log(6);
+//   });
 
-  setTimeout(() => {
-    console.log(7);
+//   setTimeout(() => {
+//     console.log(7);
 
-    Promise.resolve().then(() => {
-      console.log(8);
-    });
-  }, 2500);
-}, 1400);
-console.log("start");
+//     Promise.resolve().then(() => {
+//       console.log(8);
+//     });
+//   }, 2500);
+// }, 1400);
+// console.log("start");
 
 // start 10 11 5 6 1 2 9 3 4 7 8
 //先执行主栈同步代码 start 执行完后会把 微任务放到微任务队列 宏任务放到宏任务队列 放完直接执行微任务把微任务执行完 10 11
@@ -94,3 +94,9 @@ console.log("start");
 // node 11版本已经接近相同
 // Node 端，microtask 在事件循环的各个阶段之间执行
 // 浏览器端，microtask 在事件循环的 macrotask 执行完之后执行
+
+function sayHi() {
+  console.log("Hello,", this.name);
+}
+var name = "YvetteLau";
+sayHi();
