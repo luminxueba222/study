@@ -1,0 +1,12 @@
+::v-deep .isReadonly input {
+  background-color: #f3f3f3;
+  color: #606266;
+  cursor: pointer;
+  cursor: no-drop;  
+}
+::v-deep .isReadonly .vxe-select-option--wrapper {
+display: none;
+}
+::v-deep .isReadonly .is--clear{
+display: none ;
+}
