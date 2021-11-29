@@ -1,0 +1,6 @@
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+
+console.log(params) // {id: '2', isShare: 'true'}
+
+格式化 URl
